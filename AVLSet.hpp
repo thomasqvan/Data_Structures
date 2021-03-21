@@ -13,25 +13,18 @@ public:
 
 public:
     explicit AVLSet(bool shouldBalance = true);
-
     ~AVLSet() noexcept override;
-
-    AVLSet(const AVLSet& s);
-
-    AVLSet(AVLSet&& s) noexcept;
-
-    AVLSet& operator=(const AVLSet& s);
-
-    AVLSet& operator=(AVLSet&& s) noexcept;
-
-    bool isImplemented() const noexcept override;
-
-    void add(const ElementType& element) override;
     
+    AVLSet(const AVLSet& s);
+    AVLSet(AVLSet&& s) noexcept;
+    
+    AVLSet& operator=(const AVLSet& s);
+    AVLSet& operator=(AVLSet&& s) noexcept;
+    
+    bool isImplemented() const noexcept override;
+    void add(const ElementType& element) override;
     bool contains(const ElementType& element) const override;
-
     unsigned int size() const noexcept override;
-
     int height() const noexcept;
     
     void preorder(VisitFunction visit) const;
@@ -39,7 +32,6 @@ public:
     void postorder(VisitFunction visit) const;
 
 private:
-    
     struct Node {
     
         ElementType value;
