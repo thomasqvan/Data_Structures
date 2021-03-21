@@ -1,6 +1,6 @@
-// AVLSet.hpp
-#ifndef AVLSET_HPP
-#define AVLSET_HPP
+// AVL_Tree.hpp
+#ifndef AVL_TREE_HPP
+#define AVL_TREE_HPP
 
 #include <functional>
 #include<algorithm>
@@ -402,4 +402,4 @@ void AVLSet<ElementType>::postorder(VisitFunction visit) const
     postorder_(root, visit);
 }
 
-#endif // AVLSET_HPP
+#endif // AVL_TREE_HPP
